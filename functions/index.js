@@ -43,5 +43,9 @@ exports.createScream = functions.https.onRequest((req, res) => {
         })
 })
 
+exports.helloDude = functions.https.onRequest((req, res) => {
+    res.send('SUP DUDE');
+})
+
 // Firebase deploy when finalizing
 // Firebase serve will allow to test new functions locally
