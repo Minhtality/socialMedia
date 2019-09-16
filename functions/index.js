@@ -17,7 +17,9 @@ app.get('/screams', (req, res) => {
                     screamId: doc.id,
                     body: doc.data().body,
                     userHandle: doc.data().userHandle,
-                    createdAt: doc.data().createdAt
+                    createdAt: doc.data().createdAt,
+                    commentCount: doc.data().commentCount,
+                    likeCount: doc.data().likeCount
                 }) //return data in each document
             })
             return res.json(screams); //send a response containing our initial array, now with data in json format
